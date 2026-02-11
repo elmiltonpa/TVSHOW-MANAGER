@@ -10,7 +10,9 @@ const Footer = () => {
     <footer className="bg-primary dark:bg-black text-white py-8 px-4 sm:px-8 mt-auto">
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
         <div className="flex flex-col items-center md:items-start space-y-3">
-          <h2 className="text-2xl font-bold tracking-wider">{t("header.title")}</h2>
+          <h2 className="text-2xl font-bold tracking-wider">
+            {t("header.title")}
+          </h2>
           <p className="text-sm text-gray-200 dark:text-gray-400 max-w-xs">
             {t("footer.description")}
           </p>
@@ -32,7 +34,9 @@ const Footer = () => {
         </div>
 
         <div className="flex flex-col items-center md:items-end space-y-4">
-          <h3 className="text-lg font-semibold text-warning">{t("footer.connect")}</h3>
+          <h3 className="text-lg font-semibold text-warning">
+            {t("footer.connect")}
+          </h3>
           <div className="flex space-x-6">
             <a
               href="https://github.com/elmiltonpa/TVSHOW-MANAGER"

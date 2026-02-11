@@ -1,5 +1,5 @@
 import { memo, useCallback, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import useSeries from "../../utils/useSeries";
 import { Serie } from "../../types";
 import { useTranslation } from "react-i18next";
@@ -24,7 +24,6 @@ const SerieCard = memo(
     isLoadingToFavorite,
     setIsLoadingToFavorite,
   }: SerieCardProps) => {
-    const navigate = useNavigate();
     const { handleSubmit } = useSeries();
     const { t } = useTranslation();
     const [imageLoaded, setImageLoaded] = useState(false);
@@ -45,10 +44,6 @@ const SerieCard = memo(
       },
       [tmdbId, setSeriesAdded, seriesAdded, setIsLoadingToFavorite, handleSubmit],
     );
-
-    const handleDetailsClick = useCallback(() => {
-      navigate(`/home/${tmdbId}`);
-    }, [navigate, tmdbId]);
 
     return (
       <div className="flex flex-col md:flex-row my-3 w-full bg-background dark:bg-surface-dark shadow-sm overflow-hidden">
@@ -147,12 +142,12 @@ const SerieCard = memo(
               </h2>
             </div>
             <div className="flex-1 sm:flex-initial min-w-0">
-              <button
-                onClick={handleDetailsClick}
-                className="w-full text-xs sm:text-sm md:text-base lg:text-lg hover:bg-background hover:text-primary px-2 sm:px-4 md:px-6 lg:px-8 py-2 text-background font-semibold truncate"
+              <Link
+                to={`/home/${tmdbId}`}
+                className="block text-center w-full text-xs sm:text-sm md:text-base lg:text-lg hover:bg-background hover:text-primary px-2 sm:px-4 md:px-6 lg:px-8 py-2 text-background font-semibold truncate"
               >
                 {t("home.view_details")}
-              </button>
+              </Link>
             </div>
           </div>
         </div>

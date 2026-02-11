@@ -2,7 +2,7 @@
 
 A modern Full-Stack application for tracking TV series, managing favorites, and monitoring episode progress. Built with a robust **MERN Stack** (MongoDB, Express, React, Node.js) and fully typed with **TypeScript**.
 
-**Live Demo:** [https://tvshow-manager.vercel.app/home](https://tvshow-manager.vercel.app/home)
+**Live Demo:** [https://tvshowmanager.vercel.app/home](https://tvshowmanager.vercel.app/home)
 
 ---
 
